@@ -10,9 +10,9 @@ const app = express();
 //});
 
 //middlware -modulo que su ejecucion esta relacionada con la carga de la aplicacion. 
-app.use(express.static("statics/html")); //implementaremos middleware para una pagina web estatica
+//app.use(express.static("statics/html")); //implementaremos middleware para una pagina web estatica
 
-
+app.use("/", require('../rutes/rutes'));
 
 
 //genera el servidor corriendo en el puerto 5000
