@@ -1,14 +1,6 @@
 module.exports.home = (request, response) => {
-    response.send("hola desde el controlador home");
-}
+    return response.render("../vistas/home/home.hbs", {});
+};
 
-module.exports.we = (request, response) => {
-    response.send("hola desde el controlador we");
-}
 
-module.exports.params = (request, response) => {
-    //desestructuracion
-    const {id, slug} = request.params;
 
-    response.send("hola desde el controlador we, id = "+ id + "slug = "+ slug);
-}
