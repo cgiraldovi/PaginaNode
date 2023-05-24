@@ -1,1 +1,24 @@
 <h1>hola mundo desde hanblebar home</h1>
+<hr>
+<h3>Nombre: {{nombre}}</h3>
+<hr>
+<h3>variable local: {{variable1}}</h3>
+<hr>
+
+<hr>
+<h3>Arreglos y ciclos</h3>
+<ul>
+    {{#each paises}} <!-- inicia el cilo-->
+        <li>
+            {{this.nombre}} - {{this.nic}}
+        </li>
+    {{/each}} <!--se cierra el ciclo -->
+</ul>
+
+<hr>
+<h3>helper personalizado</h3>
+{{#calculadora 12 13}}
+{{/calculadora}}
+
+
+ <!--Componente: parte de codigo que sera reutilizado en toda la aplicacion-->
