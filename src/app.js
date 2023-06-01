@@ -18,6 +18,9 @@ app.engine(".hbs", hbs.engine);
 app.set("view engine", ".hbs");
 app.set("views", "./vistas")//segundo parametro es la carpeta que elegimos
 
+//habilitamos para formularios
+app.use(express.urlencoded({extended:true}));
+
 
 //crear variables locales, pueden ser usadas en toda la aplicacion
 app.use((request, response, next)=>{
