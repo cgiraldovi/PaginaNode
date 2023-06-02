@@ -10,6 +10,7 @@ const hbs = create({
     extname: ".hbs", //cual va a ser la extension de los archivos handlevars que se van a usar
     helpers: require('../vistas/helpers/handlebars.js'), //indica la carpeta en donde se guardaran los helpers
     //informa el lugar en donde guardaremos los partials/componentes
+    partialsDir: ['vistas/componentes'] //no poner ../
 }); 
 
 
