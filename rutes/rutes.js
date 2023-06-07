@@ -5,6 +5,7 @@ const router = express.Router();
 const homeController = require('../controllers/homeController');
 const formulariosController = require('../controllers/formulariosController');
 const reportesController = require('../controllers/reportesController');
+const utilesController = require('../controllers/utilesController')
 
 
 //GET
@@ -22,6 +23,13 @@ router.get("/reportes", reportesController.home);
 router.get("/reportes/pdf", reportesController.pdf);
 router.get("/reportes/excel", reportesController.excel);
 router.get("/reportes/csv", reportesController.csv);
+
+//utiles
+router.get("/utiles", utilesController.home);
+//router.get("/utiles/mail",utilesController.mail); No esta en funcionamiento
+router.get("/utiles/jwt",utilesController.jwt);
+router.get("/utiles/qr",utilesController.qr);
+router.get("/utiles/cliente_rest",utilesController.cliente_rest);
 
 //POST
 router.post("/formularios/normal", [
