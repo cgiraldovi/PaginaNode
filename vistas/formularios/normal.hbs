@@ -1,6 +1,8 @@
 
 <h1>Formulario simple</h1>
 
+{{>flash}}
+
 <form action="/formularios/normal" method="post" name="form">
 
     <div>
@@ -17,7 +19,7 @@
         <label for="telefono">Telefono</label>
         <input type="number" name="telefono" id="telefono">
     </div>
-
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
     <input type="submit" value="Enviar"/>
 
 </form>
